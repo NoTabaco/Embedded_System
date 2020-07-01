@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StepMotorJniActivity" >
+
+    <RadioGroup
+        android:id="@+id/DirectionGroup00"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/CLOCK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOCK" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/ACLOCK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANTICLOCK" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/CTOAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOCK TO ANTI" >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/ACTOC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANTI TO CLOCK" >
+        </RadioButton>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/SLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motor Speed"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <SeekBar
+            android:id="@+id/SpeedBar"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:max="253" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/ChangeSpeedGroup00"
+        style="android:radioButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/ltof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low To Fast(254)" />
+
+        <RadioButton
+            android:id="@+id/ftol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fast To Low(255)" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/SpeedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Speed : 0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/BT01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start" >
+        </Button>
+
+        <Button
+            android:id="@+id/BT02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/NMSLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Motor State" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/NMState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="30dp"
+            android:text="Motor State : STOP" />
+
+        <TextView
+            android:id="@+id/NMDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:text="Motor Direction : NULL" />
+
+        <TextView
+            android:id="@+id/NMSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:text="Motor Speed : NULL" />
+
+    </LinearLayout>
+
+</LinearLayout>
